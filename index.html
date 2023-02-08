@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/css/icomoon.css">
+    <link rel="stylesheet" href="./src/styles/css/index.css">
+    <script src="./src/js/main.js" defer></script>
+    <title>Makeup</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-holder">
+                <div class="nav-btn">
+                    <span></span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Featured Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">For You</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="logo-holder">
+                <a href="#">
+                    <img src="./src/img/logotype.svg" alt="logotype">
+                </a>
+            </div>
+            <div class="icon-holder">
+                <span class="icon icon-adjust"></span>
+                <span class="icon icon-heart"></span>
+                <span class="icon icon-shopping-cart"></span>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+            <section class="hero">
+                <div class="container">
+                        <div class="img-holder">
+                            <img src="./src/img/hero.png" alt="image description">
+                        </div>
+                    <div class="content">
+                        <span class="pseudo-title">Beauty lipstick </span>
+                        <h1 class="title">The Best Duo-tone
+                            buildable Foundation</h1>
+                        <p class="paragraph">You're unique - your foundation should be too. Create the best foundation for your skin tone with Minisque</p>
+                        <a href="#" class="btn shop-now">Shop Now</a>
+                    </div>
+                </div>
+            </section>
+            <section class="products">
+                <div class="container">
+                    <div class="heading">
+                        <h2 class="title">Products</h2>
+                    </div>
+                    <div class="products-list">
+                      <div class="select-holder">
+                        <label for="category">Category:</label>
+                        <select name="category" id="category" class="category">
+                            <option value="all">All</option>
+                        </select>
+                      </div>
+                      <div class="select-holder">
+                        <label for="brand">Brand:</label>
+                      <select name="brand" id="brand" class="brand">
+                        <option value="all">All</option>
+                      </select>
+                      </div>
+                      <div class="input-holder">
+                        <label for="search">Search</label>
+                        <input type="search" name="search" id="search" class="search">
+                      </div>
+                    </div>
+                    <div class="cards-holder">
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+            </section>
+            <section class="about">
+                <div class="container">
+                    <div class="heading">
+                        <h2 class="title">About</h2>
+                    </div>
+                    <div class="cards-holder">
+                        <div class="card-item">
+                            <div class="img-holder">
+                                <img src="./src/img/Group.svg" alt="image-description">
+                            </div>
+                            <strong class="card-name">Reliable</strong>
+                            <div class="text-holder">
+                                <p>We stand behind our products and give genuine advice with customer’s best interest at heart</p>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="img-holder">
+                                <img src="./src/img/Frame.svg" alt="image-description">
+                            </div>
+                            <strong class="card-name">Customizable nature</strong>
+                            <div class="text-holder">
+                                <p>Our products allow user to assume control of the color</p>
+                            </div>
+                        </div>
+                        <div class="card-item">
+                            <div class="img-holder">
+                                <img src="./src/img/fabit.svg" alt="image-description">
+                            </div>
+                            <strong class="card-name">Cruelty-free</strong>
+                            <div class="text-holder">
+                                <p>We made our products not only inclusive for human but also crutely-free for animals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="for-you">
+                <div class="container">
+                    <div class="heading">
+                        <h2 class="title">Chosen For You  </h2>
+                    </div>
+                    <div class="cards-holder chosen">
+                    </div>
+                </div>
+            </section>
+            <section class="our-practise">
+                <div class="container">
+                    <h2 class="title">Our Practices</h2>
+                    <div class="text-holder">
+                        <p>We make natural skincare inclisuive, accwssible. and approachable to all</p>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews">
+                <div class="container">
+                    <div class="heading">
+                        <h2 class="title">Reviews</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="card-item">
+                            <span class="time">02/05</span>
+                            <div class="text-holder">
+                                <p>“The hand sanitizer deels light and the evergreen scent is so cleansing.”</p>
+                            </div>
+                            <span class="author">JESICCA GOMMES</span>
+                        </div>
+                        <div class="card-item">
+                            <span class="time">02/05</span>
+                            <div class="text-holder">
+                                <p>“The hand sanitizer deels light and the evergreen scent is so cleansing.”</p>
+                            </div>
+                            <span class="author">JESICCA GOMMES</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <h2 class="title">Contact Us</h2>
+            <div class="content">
+                <div class="copy">
+                    <div class="text-holder">
+                        <p>Analyse your skin like an expert. its important to takecare.</p>
+                    </div>
+                    <div class="text-holder">
+                        <p> Markov design Ⓒ 2023</p>
+                    </div>
+                </div>
+                <div class="contact-holder">
+                    <div class="text-holder">
+                        <p>127 West 30th Street, 9th Floor
+                            New York, NY 10001</p>
+                    </div>
+                  <div class="icon-holder">
+                    <ul class="icon-list">
+                        <li class="icon-item">
+                            <a href="#" class="icon-link">
+                                <i class="icon icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="icon-item">
+                            <a href="#" class="icon-link">
+                                <i class="icon icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="icon-item">
+                            <a href="#" class="icon-link">
+                                <i class="icon icon-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="icon-item">
+                            <a href="#" class="icon-link">
+                                <i class="icon icon-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

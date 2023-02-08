@@ -1,0 +1,61 @@
+.reviews {
+    padding: 95px 0;
+    border-bottom: 1px solid $light-grey;
+    .heading {
+        margin-bottom: 90px;
+    }
+
+    .title {
+        text-align: center;
+        border-bottom: 5px solid #CD002E;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        width: 12%;
+        margin: 0 auto;
+    }
+    
+    .cards {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-item {
+        width: calc(100% / 2);
+        border: 1px solid $light-grey;
+        border-radius: 10px;
+        padding: 16px 22px 64px; 
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+            transform: scale(1.05)
+        }
+    }
+
+    .time {
+        display: block;
+        text-align: end;
+        color: $grey;
+    }
+
+    .text-holder {
+        padding: 24px 0;
+        
+        p {
+            color: $grey;
+            font-weight: 300;
+            font-size: 38px;
+            line-height: 130%;
+        }
+    }
+
+    .author {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $grey;
+    }
+
+}

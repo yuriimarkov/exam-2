@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: $default-font;
+    font-size: 18px;
+    color: $dark;
+    margin: 0;
+}
+
+h1 {
+    font-family: $secondary-font;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $bistre;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: 0.01em;
+    color: $bistre;
+}
+
+p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 159%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: $black;
+}
+
+
+a {
+    color: $dark;
+    text-decoration: none;
+    font-weight: 500;   
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    transition: all ease-in-out 0.3s;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+   max-width: 100%;
+}
+
+label {
+    color: $grey;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}

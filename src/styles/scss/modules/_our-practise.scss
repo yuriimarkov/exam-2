@@ -1,0 +1,30 @@
+.our-practise {
+    padding: 148px 0;
+    background-image: url('../../img/our-practice.jpg');
+    background-size: cover;
+    border-bottom: 1px solid $light-grey;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        margin-bottom: 30px;
+        color: $white;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%
+    }
+
+    .text-holder {
+        width: 60%;
+    }
+    .text-holder  p {
+        text-align: start;
+        color: $white;
+        font-weight: 500;
+        font-size: 75px;
+        line-height: 87px;
+        margin-top: 0;
+    }
+}
