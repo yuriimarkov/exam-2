@@ -1,7 +1,6 @@
 const navBtn = document.querySelector('.nav-btn');
 const header = document.querySelector('.header');
 
-
 navBtn.addEventListener("click", () => {
   header.classList.toggle("active");
 });
@@ -14,7 +13,7 @@ navBtn.addEventListener("click", () => {
     const selectBrand = document.querySelector('.brand')
     const search = document.querySelector('.search');
     const pagination = document.querySelector('.pagination');
-    const favoriteBtn = document.querySelector('.favorite-btn');
+
     let rows = 9;
     let currentPage = 0;
     fetch(urlApi)
@@ -25,6 +24,11 @@ navBtn.addEventListener("click", () => {
             displayPagination(data);
         })
         .catch((err) => console.log("Error:", err));
+
+        let favoriteItems = [];
+
+
+
 
     function showSortElement (data) {
         cardHolder.innerHTML = '';
@@ -134,12 +138,12 @@ navBtn.addEventListener("click", () => {
                 })
             }
         }
-
-
         search.addEventListener('keyup',displaySearch);
         selectBrand.addEventListener('change', sortByBrand);
-        selectCategory.addEventListener('change', sortByCategory)       
+        selectCategory.addEventListener('change', sortByCategory)     
     }
+
+    
     
     function createItem(element) {
             const cardItem = document.createElement("div");
@@ -155,23 +159,23 @@ navBtn.addEventListener("click", () => {
             cardName.innerHTML = `${element.brand} ${element.name}`;
             const price = document.createElement('strong')
             price.classList.add('card-price');
-            if (element.price === '0.0' || element.price_sign == 'null') {
-                price.innerText = 'Free'
-            } else {
-                price.innerHTML = `${element.price} $`;
-            }
+            price.innerHTML = `${Math.floor(element.price)} $`;
             const btnHolder = document.createElement('div')
             btnHolder.classList.add('btn-holder');
             const addBtn = document.createElement('button')
             addBtn.setAttribute('class','btn add-item');
             addBtn.innerText = 'Add bag '
             const favoriteBtn = document.createElement('button')
-            favoriteBtn.setAttribute('class','btn favorite icon-heart');
-            
+            favoriteBtn.setAttribute('class','btn favorite-btn icon-heart');
             imgHolder.append(img);
             content.append(cardName,price)
             btnHolder.append(addBtn,favoriteBtn)
             cardItem.append(imgHolder,content,btnHolder);
+
+            favoriteBtn.addEventListener("click", () => {
+                cardItem.classList.toggle("favorite");
+                  favoriteItems.push(element);
+              });
             return cardItem;
        }
        function displayPagination(data) {
@@ -198,3 +202,48 @@ navBtn.addEventListener("click", () => {
             document.querySelectorAll('.pagination__item')[0].classList.add('active');
         }
     };
+
+    function createItemWindow (element) {
+        const cardItem = document.createElement("div");
+        cardItem.classList.add('card-item'); 
+        const imgHolder = document.createElement('div')
+        imgHolder.classList.add('img-holder');
+        const img = document.createElement('img');
+        img.src = element.api_featured_image;
+        const content = document.createElement('div')
+        content.classList.add('content')
+        const cardName = document.createElement('span')
+        cardName.classList.add('card-name');
+        cardName.innerHTML = `${element.brand} ${element.name}`;
+        const price = document.createElement('strong')
+        price.classList.add('card-price');
+        price.innerHTML = `${Math.floor(element.price)} $`;
+
+        imgHolder.append(img);
+        content.append(cardName,price)
+        cardItem.append(imgHolder,content);
+        
+        return cardItem;
+    } 
+
+    const favoriteModalContainer = document.querySelector('.favorite-modal')
+    const favoriteModal = document.querySelector('.modal-content');
+    const iconWindow = document.querySelector('.icon-heart');
+    iconWindow.addEventListener('click', () => {
+        showFavorite()
+        favoriteModalContainer.style.display = "block";
+    });
+
+    function showFavorite() {
+        favoriteModal.innerHTML = '';
+        favoriteItems.forEach(e => {
+            let newItem = createItemWindow(e)
+            favoriteModal.append(newItem)
+        })
+    }
+
+    window.onclick = function(event) {
+        if (event.target == favoriteModalContainer) {
+            favoriteModalContainer.style.display = "none";
+        }
+      }

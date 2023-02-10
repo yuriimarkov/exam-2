@@ -112,7 +112,8 @@
     }
 
     .card-name {
-        width: 100%;
+        width: 90%;
+        
         padding: 25px 0;
         text-transform: capitalize;
     }
@@ -120,27 +121,6 @@
     .card-price {
         font-size: 24px;
     }
-
-    .add-item {
-        width: 96px;
-        height: 38px;
-        border-radius: 5px;
-        padding: 8px;
-        border: none;
-        box-shadow: none;
-    }
-
-    .favorite {
-        width: 45px;
-        height: 38px;
-        border: 2px solid #CD002E;
-        color: #CD002E;
-        font-size: 20px;
-        background-color: transparent;
-        box-shadow: none;
-    }
-
- 
 
     .pagination__list {
         display: flex;

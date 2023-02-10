@@ -9,7 +9,7 @@
     <script src="./src/js/main.js" defer></script>
     <title>Makeup</title>
 </head>
-<body>
+<body class="body white">
     <header class="header">
         <div class="container">
             <div class="nav-holder">
@@ -41,10 +41,18 @@
                     <img src="./src/img/logotype.svg" alt="logotype">
                 </a>
             </div>
-            <div class="icon-holder">
-                <span class="icon icon-adjust"></span>
-                <span class="icon icon-heart"></span>
-                <span class="icon icon-shopping-cart"></span>
+            <ul class="icon-holder">
+                <li class="icon"><span class="icon-adjust"></span></li>
+                <li class="icon">
+                    <span class="icon-heart"></span>
+                </li>
+                <li class="icon">
+                    <span class="icon-shopping-cart"></span>
+                </li>
+            </ul>
+            <div class="favorite-modal">
+                <div class="modal-content"></div>
+                <span class="close-btn"></span>
             </div>
         </div>
     </header>
