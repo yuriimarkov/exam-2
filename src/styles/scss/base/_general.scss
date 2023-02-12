@@ -3,7 +3,6 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 body {
     font-family: $default-font;
@@ -13,11 +12,15 @@ body {
 
 h1 {
     font-family: $secondary-font;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 50px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: $bistre;
+    color: $black;
+
+    @include media ('>=768px') {
+        font-size: 40px;
+    }
 }
 
 h2 {
@@ -25,7 +28,7 @@ h2 {
     font-size: 36px;
     line-height: 49px;
     letter-spacing: 0.01em;
-    color: $bistre;
+    color: $black;
 }
 
 p {
@@ -66,4 +69,8 @@ label {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto;
+    
+    @include media ('>=1024px') {
+        padding: 0 15px;
+    }
 }

@@ -1,8 +1,13 @@
 .our-practise {
-    padding: 148px 0;
+    padding: 25px 0;
     background-image: url('../../img/our-practice.jpg');
     background-size: cover;
+    background-position: center;
     border-bottom: 1px solid $light-grey;
+
+    @include media ('>=1024px') {
+        padding: 148px 0;
+    }
 
     .container {
         display: flex;
@@ -22,17 +27,19 @@
         @include media ('>=1024px') {
             width: 60%;
         }
-    }
-    .text-holder  p {
+
+        p {
         text-align: start;
         color: $white;
         font-weight: 500;
         font-size: 32px;
-        line-height: 87px;
+        line-height: 50px;
         margin-top: 0;
         
         @include media ('>=1024px') {
             font-size: 75px;
+            line-height: 100px;
         }
+    }
     }
 }

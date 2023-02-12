@@ -1,28 +1,52 @@
 .reviews {
-    padding: 95px 0;
+    padding: 25px 0;
     border-bottom: 1px solid $light-grey;
+    
+
+    @include media ('>=1024px') {
+        padding: 67px 0;
+    }
+
     .heading {
-        margin-bottom: 90px;
+        margin-bottom: 40px;
+
+        @include media ('>=1024px') {
+            margin-bottom: 90px;
+        }
     }
 
     .title {
+        position: relative;
         text-align: center;
-        border-bottom: 5px solid #CD002E;
-        border-radius: 10px;
-        margin-bottom: 5px;
-        width: 12%;
+        width: 100%;
         margin: 0 auto;
+
+        &::after {
+            position: absolute;
+            content: "";
+            border-bottom: 5px solid #CD002E;
+            border-radius: 10px;
+            width: 100px;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
     }
     
     .cards {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        flex-wrap: wrap;
+        gap: 5px;
         align-items: center;
         justify-content: center;
 
-        @include media ('>=1024px') {
+        @include media ('>=768px') {
             flex-direction: row;
+        }
+
+        @include media ('>=1024px') {
+            gap: 24px;
         }
     }
 
@@ -30,11 +54,11 @@
         width: 100%;
         border: 1px solid $light-grey;
         border-radius: 10px;
-        padding: 16px 22px 64px; 
+        padding: 2px 9px 2px;
         transition: all ease-in-out 0.3s;
 
-        @include media ('>=1024px') {
-            width: calc(100% / 2);
+        @include media ('>=768px') {
+            width: calc(100% / 2 - 24px);
         }
 
         &:hover {
@@ -54,8 +78,12 @@
         p {
             color: $grey;
             font-weight: 300;
-            font-size: 38px;
+            font-size: 24px;
             line-height: 130%;
+
+            @include media ('>=1024px') {
+                font-size: 38px;
+            }
         }
     }
 

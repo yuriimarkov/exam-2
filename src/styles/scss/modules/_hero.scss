@@ -1,46 +1,68 @@
 .hero {
 
-    padding: 67px 0;
+    padding: 20px 0;
     background-color: $pink;
     border-bottom: 1px solid $light-grey;
 
+    @include media ('>=1024px') {
+        padding: 67px 0;
+    }
+
     .container {
-        padding: 20px 0;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
         width: 100%;
+
+        @include media ('>=1024px') {
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
     }
 
 
 
     .img-holder {
-      width: calc(50% - 10px);
+      width: 100%;
       display: flex;
       justify-content:flex-end;
-    }
 
-    img {   
+      @include media('>=1024px') {
+        width: calc(50% - 10px);
+      }
+
+      img {   
         object-fit: cover;
+    }
     }
 
     .content {
-        width: calc(40% - 20px);
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+
+        @include media ('>=1024px') {
+            width: calc(40% - 20px);
+        }
     }
     .title {
         margin-top: 5px;
         margin-bottom: 5px;
         text-align: start;
     }
-    .paragraph {
-        padding-bottom: 40px;
-        text-align: start;
+    .text-holder {
+        padding-bottom: 20px;
+        
+        p {
+            text-align: start;
+        }
+
+        @include media ('>=768px') {
+            padding-bottom: 40px;
+        }
     }
 
     .pseudo-title {

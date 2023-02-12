@@ -1,18 +1,37 @@
 .products {
-    padding: 95px 0 ;
+    padding: 25px 0;
     border-bottom: 1px solid $light-grey;
     
+
+    @include media ('>=1024px') {
+        padding: 67px 0;
+    }
+
+
     .heading {
-        margin-bottom: 90px;
+        margin-bottom: 40px;
+
+        @include media ('>=1024px') {
+            margin-bottom: 90px;
+        }
     }
 
     .title {
+        position: relative;
         text-align: center;
-        border-bottom: 5px solid #CD002E;
-        border-radius: 10px;
-        margin-bottom: 5px;
-        width: 12%;
+        width: 100%;
         margin: 0 auto;
+
+        &::after {
+            position: absolute;
+            content: "";
+            border-bottom: 5px solid #CD002E;
+            border-radius: 10px;
+            width: 100px;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
     }
 
     .products-list{
@@ -20,8 +39,12 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 5px;
         margin-bottom: 40px;
+
+        @include media ('>=1024px') {
+            gap: 20px;
+        }
     }
 
     .select-holder,
@@ -54,8 +77,11 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 5px;
         margin-bottom: 20px;
+        @include media ('>=1024px') {
+            gap: 20px;
+        }
     }
 
     .card-item {
@@ -66,11 +92,16 @@
         border: 1px solid $light-grey;
         border-radius: 10px;
         overflow: hidden;
-        padding: 20px;
+        padding: 5px;
         transition: all ease-in-out 0.3s;
+
+        @include media ('>=768px') {
+            width: calc(100% / 3 - 30px);
+        }
+
         
         @include media ('>=1024px') {
-            width: calc(100% / 3 - 30px);
+            padding: 20px;
         }
         &:hover {
             transform: scale(1.05);
@@ -102,8 +133,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        padding-bottom: 20px;
+        padding-bottom: 10px; 
+        
+        @include media ('>=1024px') {
+            padding-bottom: 20px;
+        }
+        
     }
 
     .btn-holder {
@@ -116,9 +151,12 @@
 
     .card-name {
         width: 90%;
-        
-        padding: 25px 0;
+        padding: 5px 0;
         text-transform: capitalize;
+        
+        @include media ('>=1024px') {
+            padding: 25px 0;
+        }
     }
     
     .card-price {
