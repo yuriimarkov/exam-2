@@ -13,6 +13,7 @@
 <body>
     <header class="header">
         <div class="container">
+            <button class="arrow" title="Go to top"></button>
             <div class="nav-holder">
                 <div class="nav-btn">
                     <span></span>
@@ -23,16 +24,16 @@
                             <a href="#" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Products</a>
+                            <a href="#product" class="nav-link">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Featured Products</a>
+                            <a href="#about" class="nav-link">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">For You</a>
+                            <a href="#for-you" class="nav-link">For You</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contact</a>
+                            <a href="#footer" class="nav-link">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -50,9 +51,9 @@
                     <span class="icon-shopping-cart"></span>
                 </li>
             </ul>
-            <div class="favorite-modal">
+            <div class="modal">
                 <div class="modal-heading">
-                    <h2>Favorite product</h2>
+                    <h2>Product List</h2>
                     <span class="close-btn"></span>
                 </div>
                 <div class="modal-content">
@@ -77,7 +78,7 @@
                     </div>
                 </div>
             </section>
-            <section class="products">
+            <section class="products" id="product">
                 <div class="container">
                     <div class="heading">
                         <h2 class="title">Products</h2>
@@ -105,7 +106,7 @@
                     <div class="pagination"></div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <div class="heading">
                         <h2 class="title">About</h2>
@@ -141,7 +142,7 @@
                     </div>
                 </div>
             </section>
-            <section class="for-you">
+            <section class="for-you" id="for-you">
                 <div class="container">
                     <div class="heading">
                         <h2 class="title">Chosen for you</h2>
@@ -196,7 +197,7 @@
                 </div>
             </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <h2 class="title">Contact Us</h2>
             <div class="content">

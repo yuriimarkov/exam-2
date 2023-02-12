@@ -62,4 +62,63 @@
         visibility: visible;
 
     }
+
+    .arrow {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      outline: none;
+      background-color: #CD002E;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .arrow:after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      color: #fff;
+      border-top: 3px solid;
+      border-left: 3px solid;
+      display: inline-block;
+      position: absolute;
+      transform: translateY(50px) rotateZ(45deg);
+      top: -65%;
+      left: 55%;  
+      margin-left: -9px;
+    }
+    
+    .arrow:hover:after {
+      animation: arrowSlide 0.5s ease-in 1;
+    }
+    
+    @keyframes arrowSlide {
+      0% {
+        transform: translateY(50px) rotateZ(45deg);
+      }
+      25% {
+        transform: translateY(-100px) rotateZ(45deg);
+      }
+      50% {
+        transform: translate(150px, 150px) rotateZ(45deg);
+      }
+      75% {
+        transform: translateY(100px) rotateZ(45deg);
+      }
+      100% {
+        transform: translateY(50px) rotateZ(45deg);
+      }
+    }
+}
+
+.swiper1 {
+  width: 100%;
+  height: 100%;
 }
