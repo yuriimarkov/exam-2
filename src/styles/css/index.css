@@ -953,15 +953,26 @@ label {
   line-height: 120%;
 }
 .our-practise .text-holder {
-  width: 60%;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .our-practise .text-holder {
+    width: 60%;
+  }
 }
 .our-practise .text-holder p {
   text-align: start;
   color: #fff;
   font-weight: 500;
-  font-size: 75px;
+  font-size: 32px;
   line-height: 87px;
   margin-top: 0;
+}
+@media (min-width: 1024px) {
+  .our-practise .text-holder p {
+    font-size: 75px;
+  }
 }
 
 .reviews {
@@ -1059,17 +1070,27 @@ label {
           flex-direction: column;
   flex-direction: column;
 }
+.footer .title {
+  padding-bottom: 10px;
+}
 .footer .content {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (min-width: 1024px) {
+  .footer .content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .footer .copy {
   display: -webkit-box;
@@ -1085,7 +1106,12 @@ label {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: calc(30% - 20px);
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .footer .copy {
+    width: calc(30% - 20px);
+  }
 }
 .footer .text-holder p {
   color: #fff;
@@ -1098,7 +1124,7 @@ label {
   color: #fff;
 }
 .footer .contact-holder {
-  width: calc(25% - 20px);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,6 +1136,11 @@ label {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 10px;
+}
+@media (min-width: 1024px) {
+  .footer .contact-holder {
+    width: calc(25% - 20px);
+  }
 }
 .footer .icon-list {
   display: -webkit-box;
