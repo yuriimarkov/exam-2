@@ -61,6 +61,7 @@
 
     @include media ('>=1024px') {
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .card-item {
