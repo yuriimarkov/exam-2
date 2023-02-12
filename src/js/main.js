@@ -174,13 +174,21 @@ navBtn.addEventListener("click", () => {
 
             favoriteBtn.addEventListener("click", () => {
                 cardItem.classList.toggle("favorite");
-                  favoriteItems.push(element);
+                let checkItem = favoriteItems.indexOf(element);
+                  if(~checkItem) {
+                    favoriteItems.splice(checkItem,1);
+                  } else {
+                    favoriteItems.push(element)
+                  }
               });
+
+              
             return cardItem;
        }
        function displayPagination(data) {
         pagination.innerHTML = '';
-        const pageCount = Math.ceil(data.length / rows);
+        const pageCount = Math.ceil(data.length / rows - 1);
+        console.log(pageCount)
         let ul = document.createElement('ul');
         ul.classList.add('pagination__list');
         pagination.append(ul);
@@ -229,11 +237,11 @@ navBtn.addEventListener("click", () => {
     const favoriteModalContainer = document.querySelector('.favorite-modal')
     const favoriteModal = document.querySelector('.modal-content');
     const iconWindow = document.querySelector('.icon-heart');
+    const closeBtn = document.querySelector('.close-btn');
     iconWindow.addEventListener('click', () => {
         showFavorite()
         favoriteModalContainer.style.display = "block";
     });
-
     function showFavorite() {
         favoriteModal.innerHTML = '';
         favoriteItems.forEach(e => {
@@ -242,8 +250,13 @@ navBtn.addEventListener("click", () => {
         })
     }
 
+    closeBtn.onclick = () => {
+        favoriteModalContainer.style.display = 'none';
+    }
+
     window.onclick = function(event) {
         if (event.target == favoriteModalContainer) {
             favoriteModalContainer.style.display = "none";
         }
       }
+

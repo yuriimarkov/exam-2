@@ -16,17 +16,26 @@
     
     .cards {
         display: flex;
+        flex-direction: column;
         gap: 24px;
         align-items: center;
         justify-content: center;
+
+        @include media ('>=1024px') {
+            flex-direction: row;
+        }
     }
 
     .card-item {
-        width: calc(100% / 2);
+        width: 100%;
         border: 1px solid $light-grey;
         border-radius: 10px;
         padding: 16px 22px 64px; 
         transition: all ease-in-out 0.3s;
+
+        @include media ('>=1024px') {
+            width: calc(100% / 2);
+        }
 
         &:hover {
             transform: scale(1.05)
